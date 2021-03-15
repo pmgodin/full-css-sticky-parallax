@@ -1,0 +1,34 @@
+.parallax {
+	--speed: 1;
+	--top: 100%;
+	box-sizing: border-box;
+	height: calc(100% * var(--speed));
+	pointer-events: none;
+	position: absolute;
+	transform: scale(calc(1/var(--speed)));
+	transform-origin: top left;
+	width: calc(100% * var(--speed));
+	z-index: 1;
+}
+.parallax > div {
+	position: sticky;
+	top: calc(var(--top) * var(--speed));
+}
+.parallax .subject {
+	transform: scale(var(--speed));
+	transform-origin: top left;
+}
+.parallax.right > div {
+	margin-left: 100%;
+}
+.parallax.right .subject {
+	left: auto;
+	right: 0;
+}
+.parallax.bottom {
+	bottom: 0;
+	transform-origin: bottom left;
+}
+.parallax.bottom > div {
+	top: calc(-1 * var(--top) * var(--speed));
+}
