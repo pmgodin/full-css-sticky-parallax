@@ -16,6 +16,9 @@
 				font-size: 16px;
 				position: relative;
 			}
+			html {
+				overflow-x: hidden;
+			}
 			h1, h2, h3, h4, h5, h6 {
 				font-family: 'Permanent Marker', cursive;
 				margin: 1rem 0;
@@ -33,6 +36,9 @@
 				font-size: 2em;
 				padding: 2em 0 0;
 			}
+			p {
+				line-height: 1.4em;
+			}
 			main {
 				padding: 0 0 240px;
 				position: relative;
@@ -47,14 +53,14 @@
 			.columns {
 				display: flex;
 			}
-			.columns div {
+			.columns > div {
 				margin-left: 2em;
 				margin-right: 2em;
 			}
-			.columns div:first-child {
+			.columns > div:first-child {
 				margin-left: 0;
 			}
-			.columns div:last-child {
+			.columns > div:last-child {
 				margin-right: 0;
 			}
 
@@ -116,6 +122,9 @@
         		--top: 30%;
         		opacity: 0.4;
         	}
+        	#content .quick .leX {
+        		--speed: 0.5;
+        	}
         	.splash {
         		--top: 1%;
         		--speed: 2;
@@ -124,6 +133,17 @@
         		margin-left: calc(var(--speed) * -1500px);
         		margin-bottom: 100%;
         	}
+        	.text {
+        		--top: 10%;
+        		--speed: .75;
+        		font-size: calc(1em * var(--speed));
+        		/*line-height: 1em;*/
+        	}
+        	.quick {
+        		height: 100%;
+        		position: absolute;
+        		width: 75%;
+        	}
 		</style>
 	</head>
 	<body>
@@ -131,6 +151,9 @@
 		<div class="parallax glass"><div><img class="subject" width="300" src="https://festivalrien.com/2019/images/ecocup.jpg"></div></div>
 		<div class="parallax bottom right leX"><div><img class="subject" width="400" src="https://festivalrien.com/2019/images/leX.png"></div></div>
 		<div id="content">
+			<div class="quick">
+				<div class="parallax leX"><div><img class="subject" width="400" src="https://festivalrien.com/2019/images/leX.png"></div></div>
+			</div>
 			<div class="parallax glass"><div><img class="subject" width="300" src="https://festivalrien.com/2019/images/ecocup.jpg"></div></div>
 			<div class="parallax bottom right leX"><div><img class="subject" width="200" src="https://festivalrien.com/2019/images/leX.png"></div></div>
 			<main>
@@ -154,11 +177,21 @@
 						<p>Quia quam assumenda eos ipsam in, maxime, facere quasi aliquid sit fuga numquam voluptate deleniti quaerat, iure, natus ut. Error cumque nisi id deserunt neque maiores quia illum nobis velit.</p>
 						<p>In corporis eligendi molestiae nihil praesentium nemo numquam. Iste debitis, temporibus expedita veniam aspernatur repellat consequuntur, cumque, consectetur facilis aliquid similique amet vitae accusamus sint possimus quia minima reiciendis. Commodi.</p>
 					</div>
-					<div>
-						<p>Perspiciatis praesentium animi quis commodi expedita numquam quisquam eveniet tempore voluptatem odio reprehenderit voluptatibus quidem voluptate quo cumque vitae eum nihil nam, officiis sint magni! Veritatis, quos perspiciatis adipisci optio.</p>
-						<p>Iure odit repellendus placeat ut, necessitatibus minus aliquid aliquam, iusto repudiandae illum eaque ea soluta a possimus non qui illo rem excepturi at? Dolore quo nobis nulla a, corrupti expedita.</p>
-						<p>Fugit tempora, saepe beatae voluptatem culpa consequatur soluta officia, repellat. Voluptate sit, esse quibusdam dolorem et, voluptatibus qui quae id non aperiam eligendi debitis possimus neque eveniet molestiae, a itaque.</p>
-						<p>Ut cum soluta natus voluptatem ducimus deserunt cupiditate dolores similique ipsum temporibus? Libero, excepturi. Distinctio repellendus obcaecati quo hic esse numquam, reprehenderit rem, nam quaerat quisquam officia, magnam labore, amet.</p>
+					<div style="position: relative;">
+						<div class="parallax text">
+							<div>
+								<p>Perspiciatis praesentium animi quis commodi expedita numquam quisquam eveniet tempore voluptatem odio reprehenderit voluptatibus quidem voluptate quo cumque vitae eum nihil nam, officiis sint magni! Veritatis, quos perspiciatis adipisci optio.</p>
+								<p>Iure odit repellendus placeat ut, necessitatibus minus aliquid aliquam, iusto repudiandae illum eaque ea soluta a possimus non qui illo rem excepturi at? Dolore quo nobis nulla a, corrupti expedita.</p>
+								<p>Fugit tempora, saepe beatae voluptatem culpa consequatur soluta officia, repellat. Voluptate sit, esse quibusdam dolorem et, voluptatibus qui quae id non aperiam eligendi debitis possimus neque eveniet molestiae, a itaque.</p>
+								<p>Ut cum soluta natus voluptatem ducimus deserunt cupiditate dolores similique ipsum temporibus? Libero, excepturi. Distinctio repellendus obcaecati quo hic esse numquam, reprehenderit rem, nam quaerat quisquam officia, magnam labore, amet.</p>
+							</div>
+						</div>
+						<div style="visibility: hidden;">
+							<p>Perspiciatis praesentium animi quis commodi expedita numquam quisquam eveniet tempore voluptatem odio reprehenderit voluptatibus quidem voluptate quo cumque vitae eum nihil nam, officiis sint magni! Veritatis, quos perspiciatis adipisci optio.</p>
+							<p>Iure odit repellendus placeat ut, necessitatibus minus aliquid aliquam, iusto repudiandae illum eaque ea soluta a possimus non qui illo rem excepturi at? Dolore quo nobis nulla a, corrupti expedita.</p>
+							<p>Fugit tempora, saepe beatae voluptatem culpa consequatur soluta officia, repellat. Voluptate sit, esse quibusdam dolorem et, voluptatibus qui quae id non aperiam eligendi debitis possimus neque eveniet molestiae, a itaque.</p>
+							<p>Ut cum soluta natus voluptatem ducimus deserunt cupiditate dolores similique ipsum temporibus? Libero, excepturi. Distinctio repellendus obcaecati quo hic esse numquam, reprehenderit rem, nam quaerat quisquam officia, magnam labore, amet.</p>
+						</div>
 					</div>
 				</div>
 				<h3>Minima quo doloremque magnam officia soluta ut</h3>
