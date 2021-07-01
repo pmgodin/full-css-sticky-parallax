@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Full CSS Sticky Parallax </title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+		<style>
+			html,
+			body {
+				background: black;
+				color: white;
+				font-family: 'Open Sans', sans-serif;
+				font-size: 16px;
+				position: relative;
+			}
+			html {
+				overflow-x: hidden;
+			}
+			h1, h2, h3, h4, h5, h6 {
+				font-family: 'Permanent Marker', cursive;
+				margin: 1rem 0;
+			}
+			h1 {
+				font-size: 3em;
+				line-height: 1em;
+				padding: 2em 0 0;
+			}
+			h2 {
+				font-size: 2em;
+				padding: 2em 0 1em;
+			}
+			h3 {
+				font-size: 2em;
+				padding: 2em 0 0;
+			}
+			p {
+				line-height: 1.4em;
+			}
+			main {
+				margin: 0 auto;
+				max-width: 990px;
+				padding: 0 0 240px;
+				position: relative;
+				z-index: 2;
+			}
+			.menu {
+				float: right;
+				min-height: 100vh;
+				min-width: 200px;
+				width: 50%;
+			}
+			.menu > div {
+				padding: 150px 50px 50px;
+			}
+			.menu ul,
+			.menu ul li {
+				list-style: none;
+				margin: 0;
+				position: relative;
+			}
+			.menu ul li {
+				margin: 2px 0;
+			}
+			.menu ul li > div {
+				height: 200vh;
+				position: absolute;
+				bottom: 0;
+				transform: scale(0.5);
+				transform-origin: bottom left;
+				width: 100%;
+			}
+			.menu ul li > div:last-child,
+			.menu ul li > div > div {
+				color: #FFF;
+				padding: 10px 20px;
+				width: 100%;
+			}
+			.menu ul li > div:last-child {
+				background: blue;
+				height: auto;
+				position: relative;
+				visibility: hidden;
+			}
+			.menu ul li > div > div {
+				background: red;
+				position: sticky;
+				opacity: 0.5;
+				top: 2px;
+				transform: scale(2);
+				z-index: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="menu">
+				<div>
+					<ul>
+						<li><div><div>Donec dignissim vehicula justo</div></div><div>Donec dignissim vehicula justo</div></li>
+						<li><div><div>Eget fringilla ex condimentum auctor</div></div><div>Eget fringilla ex condimentum auctor</div></li>
+						<li><div><div>Donec congue sit amet neque et vehicula</div></div><div>Donec congue sit amet neque et vehicula</div></li>
+						<li><div><div>Duis a vestibulum elit</div></div><div>Duis a vestibulum elit</div></li>
+						<li><div><div>Donec at imperdiet libero</div></div><div>Donec at imperdiet libero</div></li>
+						<li><div><div>Sit amet mollis quam</div></div><div>Sit amet mollis quam</div></li>
+						<li><div><div>Suspendisse in cursus enim, non accumsan libero</div></div><div>Suspendisse in cursus enim, non accumsan libero</div></li>
+						<li><div><div>Mauris ex nunc, dictum id finibus a</div></div><div>Mauris ex nunc, dictum id finibus a</div></li>
+						<li><div><div>Hendrerit vitae sapien</div></div><div>Hendrerit vitae sapien</div></li>
+					</ul>
+				</div>
+			</div>
+			<h1>Dolor sit amet, consectetur adipiscing elit</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>. Cras non leo sagittis, consectetur nisl id, dignissim diam. Quisque consectetur arcu non porta pulvinar. Fusce ac massa odio. Suspendisse volutpat neque sed tellus elementum rutrum. Etiam maximus eros vitae bibendum commodo. In hac habitasse platea dictumst. Fusce laoreet euismod eros vel molestie. Pellentesque a erat nec diam venenatis tincidunt quis vel ex. Praesent lobortis nunc vel placerat convallis. Pellentesque vitae ornare nibh, sit amet feugiat est. Proin lacinia urna sem, et eleifend arcu gravida varius. Integer dignissim in lacus quis rhoncus. Cras et sapien vitae lorem eleifend accumsan. Sed nec consequat massa. In at dui vel sem finibus vulputate.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus sagittis varius. Donec commodo nisi mauris, non convallis augue volutpat sit amet. Donec congue est sed libero malesuada fringilla. Vestibulum in tincidunt metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus odio diam, sollicitudin sed accumsan id, mattis sed nunc. Maecenas pulvinar felis nec maximus eleifend. Phasellus molestie ullamcorper finibus. Quisque convallis maximus justo, eu pellentesque nulla luctus sed. Etiam aliquet eros odio, non ultrices quam pellentesque sed. Suspendisse potenti. Aliquam erat volutpat. Curabitur sed orci at justo interdum congue non ac ex.</p>
+			<h2>Mauris metus turpis, luctus nec eros eu</h2>
+			<p>Mauris metus turpis, luctus nec eros eu, suscipit imperdiet quam. Aliquam eget auctor nisi. Donec eget euismod purus, at tincidunt tellus. Vestibulum quis magna congue, condimentum urna non, dignissim libero. Fusce elementum rutrum dolor quis dapibus. Cras consectetur augue nec ornare euismod. Mauris porta, felis nec tempor interdum, est tellus commodo nibh, et elementum tellus purus at ante. Nunc vestibulum odio eros.</p>
+			<h3>Vestibulum ullamcorper nibh eu</h3>
+			<p>Vestibulum ullamcorper nibh eu libero eleifend, et sagittis ipsum varius. Sed et diam sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vehicula facilisis libero quis tempor. Maecenas tortor lorem, euismod ut tincidunt pulvinar, imperdiet ac ex. Donec quis nulla sit amet orci eleifend semper quis eget massa. Phasellus quis convallis turpis, vel imperdiet nisi. Cras nec ex nunc. Curabitur in auctor elit, sed aliquam diam. Nunc ante libero, pellentesque eu congue a, ultrices id nisi. Etiam leo dui, faucibus eget dolor eget, porta dignissim augue. Mauris ultricies velit et est ultrices, nec vestibulum justo pretium. In at maximus ante, in accumsan tellus. Praesent sit amet porta leo.</p>
+			<h3>Aenean condimentum leo</h3>
+			<p>Aenean condimentum leo eu consequat pellentesque. Etiam aliquam tempor est in commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus pellentesque dolor sed venenatis mollis. Curabitur porttitor nulla vel risus hendrerit, sed vestibulum augue efficitur. Fusce euismod eros sed orci elementum tempor. Cras ac ex sapien. Sed eu placerat justo. Morbi ac ultrices ligula, id iaculis libero. Integer eget dictum lacus. Suspendisse dignissim ex sed sem posuere aliquam. Quisque vel efficitur lectus. Vivamus id est sagittis, sollicitudin risus non, eleifend orci. Ut a ipsum orci. Integer rhoncus eget arcu a suscipit.</p>
+			<p>Donec dignissim vehicula justo, eget fringilla ex condimentum auctor. Donec congue sit amet neque et vehicula. Duis a vestibulum elit. Donec at imperdiet libero, sit amet mollis quam. Suspendisse in cursus enim, non accumsan libero. Mauris ex nunc, dictum id finibus a, hendrerit vitae sapien. Nam id ante ut leo pulvinar gravida. Integer id neque sit amet erat molestie faucibus congue quis erat. Pellentesque in venenatis sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sagittis porttitor turpis, sed mattis mi porttitor in. Donec libero velit, dapibus eu elementum eu, sodales non tellus.</p>
+			<p>Phasellus quis vehicula mi, non laoreet sapien. Pellentesque eu vehicula massa, sed blandit mauris. Mauris vitae arcu vitae metus feugiat maximus. Mauris a dolor nisi. Maecenas leo dolor, sagittis non sagittis sit amet, egestas nec nulla. Sed lorem felis, bibendum vel purus et, lacinia ultricies lacus. Nulla facilisi. Suspendisse molestie, turpis quis mollis maximus, risus arcu ullamcorper justo, vel sodales massa sapien quis arcu. Curabitur sit amet enim volutpat, elementum odio sit amet, suscipit mi. Aliquam erat volutpat. Mauris facilisis ligula ut urna elementum pharetra. Nullam congue, orci quis vestibulum hendrerit, quam orci rutrum risus, eget suscipit augue nisi a neque. Nunc pharetra tristique enim. Nulla vel fermentum ex. Suspendisse bibendum leo vitae mi pretium fringilla. Donec semper efficitur eros at facilisis.</p>
+			<p>Curabitur convallis bibendum lorem porttitor porta. Donec vitae mauris in purus rhoncus fermentum. Maecenas quis lorem nec lorem convallis condimentum. Donec viverra at ipsum sed pulvinar. Suspendisse potenti. Sed cursus tortor in metus tempor, eu placerat sapien blandit. Suspendisse in ipsum vel lacus mattis cursus id in justo.</p>
+			<p>Duis a fringilla tortor, ut ultricies ante. Cras efficitur quis tellus eu mattis. Pellentesque lobortis lectus vitae turpis elementum feugiat. Cras pharetra facilisis varius. Ut non luctus felis, non ullamcorper urna. Sed malesuada dolor et tortor mattis, quis rhoncus erat accumsan. Maecenas maximus consequat ipsum, nec tristique justo elementum id. Nullam eleifend nunc eget felis consectetur, et sollicitudin justo vestibulum. Sed vestibulum sapien nunc, nec vehicula felis tincidunt ac. Cras vitae dolor pellentesque, eleifend nisi eget, placerat mauris. Proin laoreet quam non lectus tempor, a volutpat ligula ultricies. Curabitur lobortis finibus lectus a dignissim.</p>
+			<p>Morbi sit amet velit ex. Proin sodales faucibus sem eu scelerisque. Ut ante est, laoreet quis vestibulum nec, fringilla in erat. Praesent odio massa, imperdiet sit amet gravida sed, egestas in nunc. Integer in turpis vel ligula rutrum viverra at et ipsum. In hac habitasse platea dictumst. In aliquam, mauris faucibus pulvinar convallis, nibh nisl interdum eros, in pharetra ex odio vel dui. Nunc luctus turpis sit amet sapien bibendum porta. Nam fringilla vitae tellus at lacinia. Fusce venenatis neque elementum dui volutpat fringilla. Suspendisse id nibh sit amet quam auctor blandit eu eu nisi. Mauris ornare dui eu erat posuere, at lacinia leo ultricies.</p>
+		</main>
+	</body>
+</html>
